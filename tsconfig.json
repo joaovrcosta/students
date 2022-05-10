@@ -1,0 +1,35 @@
+// {
+//   "compilerOptions": {
+
+//     "outDir": "dist",
+//     "esModuleInterop": true,
+//     "emitDecoratorMetadata": true,
+//     "experimentalDecorators": true,
+//   }
+// }
+
+
+{
+  "compilerOptions": {
+   
+    "target": "es2016",
+
+     "experimentalDecorators": true,                   
+     "emitDecoratorMetadata": true, 
+
+    "module": "commonjs",
+
+    "rootDir": "./",                                   
+
+     "resolveJsonModule": true,                        
+  
+     "outDir": "./dist",                               
+    
+    "esModuleInterop": true,
+                              
+    "forceConsistentCasingInFileNames": true,           
+
+    "skipLibCheck": true 
+  
+  }
+}
