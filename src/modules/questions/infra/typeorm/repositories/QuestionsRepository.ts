@@ -15,14 +15,14 @@ class QuestionsRepository implements IQuestionsRepository {
     title,
     content,
     category_id,
-    author_id
+    student_id
 
   }: ICreateQuestionDTO): Promise<void> {
     const question = this.repository.create({
       title,
       content,
       category_id,
-      author_id
+      student_id
     });
 
     await this.repository.save(question);
