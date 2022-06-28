@@ -10,6 +10,6 @@ const listQuestionsController = new ListQuestionController();
 
 questionsRoutes.post("/", createQuestionController.handle);
 
-questionsRoutes.get("/ask", listQuestionsController.handle)
+questionsRoutes.get("/list", listQuestionsController.handle)
 
 export { questionsRoutes }

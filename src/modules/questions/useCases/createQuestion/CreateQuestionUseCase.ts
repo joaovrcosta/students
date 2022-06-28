@@ -5,7 +5,7 @@ interface IRequest {
   title: string;
   content: string;
   category_id: string;
-  author_id: string;
+  student_id: string;
 }
 
 @injectable()
@@ -19,13 +19,13 @@ class CreateQuestionUseCase {
     title, 
     content, 
     category_id,
-    author_id
+    student_id
   }: IRequest): Promise<void> {
     await this.questionsRepository.create({
       title,
       content,
       category_id,
-      author_id,
+      student_id,
     });
   }
 }

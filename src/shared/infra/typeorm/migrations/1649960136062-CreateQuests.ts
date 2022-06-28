@@ -16,12 +16,12 @@ export class CreatQuests1649960136062 implements MigrationInterface {
             type: "varchar",
           },
           {
-            name: "contents",
+            name: "content",
             type: "varchar",
           },
           {
-            name: "category",
-            type: "varchar",
+            name: "category_id",
+            type: "uuid",
           },
           {
             name: "rate",
@@ -50,6 +50,14 @@ export class CreatQuests1649960136062 implements MigrationInterface {
             referencedTableName: "student",
             referencedColumnNames: ["id"],
             columnNames: ["student_id"],
+            onDelete: "SET NULL", //deve-se alterar futuramente para que quando um usuario não existir mais a pergunta dele permaneça
+            onUpdate: "SET NULL",
+          },
+          {
+            name: "FKCategoryId",
+            referencedTableName: "categories",
+            referencedColumnNames: ["id"],
+            columnNames: ["category_id"],
             onDelete: "SET NULL", //deve-se alterar futuramente para que quando um usuario não existir mais a pergunta dele permaneça
             onUpdate: "SET NULL",
           },
